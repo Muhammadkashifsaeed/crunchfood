@@ -1,0 +1,21 @@
+# Crunch Foods
+
+> B2B wholesale supplier of fried chicken breading, peri peri marinations, Nashville hot dustings, honey spice blends, and dipping rubs for foodservice operators, ghost kitchens, QSR chains, distributors (Sysco, US Foods, GFS) and private-label brands across the USA and Canada.
+
+Bulk MOQs, contract blending, pallet-ready shipping, and free samples for qualified operators.
+
+## Pages
+
+- [Home](/): Product overview, capabilities, and wholesale inquiry.
+
+## Product range (sections on the home page)
+
+- [Breading](/#breading): Philadelphia premium breading in 12.5 kg bags.
+- [Dry → Liquid concept](/#concept): How our dry blends convert to liquid marinations and sauces.
+- [Peri Peri Marinations](/#marination): Lemon & Herb, Medium, and Hot.
+- [Nashville Hot](/#nashville): Nashville hot dusting spice and oils.
+- [Dippings](/#dippings): Signature dipping spice blends.
+- [Honey Spice Blends](/#honey-sauces): Honey cayenne, habanero, scotch bonnet drizzles.
+- [Packaging](/#packaging): Bulk and retail-ready packaging options.
+- [Wholesale](/#leadgen): Pricing, MOQs, lead times.
+- [Contact](/#contact): Quote requests and sales channels.
