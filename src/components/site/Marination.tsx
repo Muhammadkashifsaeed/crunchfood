@@ -1,5 +1,6 @@
 import marinationImg from "@/assets/marination.jpg";
 import PackDetails, { PackSpec } from "./PackDetails";
+import { motion } from "framer-motion";
 
 type HeatItem = {
   name: string;
@@ -72,6 +73,19 @@ const HeatIndicator = ({ level }: { level: number }) => (
 );
 
 const Marination = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: 20 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } }
+  };
+
   return (
     <section id="marination" className="relative py-24 lg:py-32 bg-muted/30 overflow-hidden">
       <div className="container-x">
@@ -94,7 +108,7 @@ const Marination = () => {
 
           <div>
             <span className="text-eyebrow">02 · Peri Peri Marination & Sauce — Wholesale</span>
-            <h2 className="text-display mt-4 text-4xl lg:text-5xl">
+            <h2 className="text-display mt-4 text-4xl lg:text-5xl drop-shadow-sm">
               Bulk peri peri dry marinations for foodservice.
             </h2>
             <p className="mt-6 text-muted-foreground text-lg">
@@ -111,35 +125,44 @@ const Marination = () => {
               <span className="text-sm text-foreground"><span className="text-display gradient-text-ember">1:4</span> spice : yogurt/mayo → dipping sauce</span>
             </div>
 
-            <div className="mt-10 space-y-4">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-50px" }}
+              className="mt-10 space-y-4"
+            >
               {heatLevels.map((m) => (
-                <article
+                <motion.article
+                  variants={itemVariants}
                   key={m.name}
                   itemScope
                   itemType="https://schema.org/Product"
-                  className="p-5 bg-card border border-border hover:border-secondary/60 transition-colors"
+                  className="group p-5 glass-card hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/40 hover:bg-white/5 transition-all duration-300 cursor-default"
                 >
                   <meta itemProp="name" content={m.name} />
                   <meta itemProp="description" content={m.note} />
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex-1">
-                      <div className="text-foreground font-medium">{m.name}</div>
+                      <div className="text-foreground font-medium group-hover:text-primary transition-colors duration-300">{m.name}</div>
                       <div className="text-sm text-muted-foreground mt-0.5">{m.note}</div>
                     </div>
-                    <HeatIndicator level={m.heat} />
+                    <div className="group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(251,146,60,0.5)] transition-all duration-300">
+                      <HeatIndicator level={m.heat} />
+                    </div>
                   </div>
                   {m.ingredients && (
                     <PackDetails
-                      className="mt-4 pt-4 border-t border-border"
+                      className="mt-4 pt-4 border-t border-white/10"
                       ingredients={m.ingredients}
                       bolded={m.bolded}
                       allergens={m.allergens}
                       method={m.method}
                     />
                   )}
-                </article>
+                </motion.article>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -148,3 +171,4 @@ const Marination = () => {
 };
 
 export default Marination;
+

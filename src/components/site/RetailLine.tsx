@@ -32,7 +32,7 @@ const RetailLine = () => {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <span className="text-eyebrow">07 · Retail Line — Direct-to-Consumer</span>
-            <h2 className="text-display mt-4 text-4xl lg:text-6xl">
+            <h2 className="text-display mt-4 text-4xl lg:text-6xl drop-shadow-sm">
               Bottled & jarred. <br /><span className="gradient-text-ember">Built for the shelf.</span>
             </h2>
           </div>
@@ -54,7 +54,7 @@ const RetailLine = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {bottles.map((b, i) => (
-              <article key={b.name} className="group bg-card border border-border hover:border-primary/40 transition-all overflow-hidden">
+              <article key={b.name} className="group glass-card transition-all overflow-hidden">
                 <div className="relative aspect-square overflow-hidden bg-muted/20">
                   <div className={`absolute inset-0 bg-gradient-to-br ${b.accent} opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10`} />
                   <img
@@ -87,7 +87,7 @@ const RetailLine = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {dips.map((d) => (
-              <article key={d.name} className="group bg-card border border-border hover:border-primary/40 transition-all overflow-hidden">
+              <article key={d.name} className="group glass-card transition-all overflow-hidden">
                 <div className="relative aspect-square overflow-hidden bg-muted/20">
                   <div className={`absolute inset-0 bg-gradient-to-br ${d.accent} opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10`} />
                   <img

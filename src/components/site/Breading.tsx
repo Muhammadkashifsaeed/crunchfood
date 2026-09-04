@@ -74,57 +74,63 @@ const breadings: Breading[] = [
 
 const Breading = () => {
   return (
-    <section id="breading" className="relative py-24 lg:py-32 bg-background">
-      <div className="container-x">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <img
-            src={breadingImg.src}
-            alt="Premium breading flour being dredged onto raw chicken pieces"
-            loading="lazy"
-            width={1280}
-            height={1280}
-            className="w-full aspect-square object-cover shadow-deep order-2 lg:order-1"
-          />
-        <div className="order-1 lg:order-2">
-          <span className="text-eyebrow">01 · Wholesale Breading & Marinades</span>
-          <h2 className="text-display mt-4 text-4xl lg:text-6xl">
-            Five wholesale formulas. <br />
-            <span className="gradient-text-ember">Built for foodservice scale.</span>
-          </h2>
-          <p className="mt-6 text-lg text-muted-foreground">
-            Each blend is milled, seasoned and pressure-tested in commercial
-            fryers, then packed in moisture-locked foodservice bags — ready
-            for distributor and direct-to-kitchen freight.
-          </p>
-        </div>
+    <section id="breading" className="relative py-24 lg:py-36 bg-background">
+      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] pointer-events-none -translate-x-1/2 -translate-y-1/4" />
+      
+      <div className="container-x relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="premium-image-wrap group order-2 lg:order-1">
+            <img
+              src={breadingImg.src}
+              alt="Premium breading flour being dredged onto raw chicken pieces"
+              loading="lazy"
+              width={1280}
+              height={1280}
+              className="w-full aspect-[4/5] sm:aspect-square object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
+          </div>
+          
+          <div className="order-1 lg:order-2">
+            <span className="text-eyebrow">01 · Wholesale Breading & Marinades</span>
+            <h2 className="text-display mt-5 text-4xl lg:text-6xl drop-shadow-sm drop-shadow-sm">
+              Five wholesale formulas. <br />
+              <span className="gradient-text-ember">Built for foodservice scale.</span>
+            </h2>
+            <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
+              Each blend is milled, seasoned and pressure-tested in commercial
+              fryers, then packed in moisture-locked foodservice bags — ready
+              for distributor and direct-to-kitchen freight.
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {breadings.map((b, i) => (
             <article
               key={b.name}
               itemScope
               itemType="https://schema.org/Product"
-              className="group relative bg-card border border-border p-8 lg:p-10 hover:border-primary/50 transition-all duration-500 overflow-hidden"
+              className="group relative glass-card p-10 overflow-hidden hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(251,146,60,0.15)] hover:border-primary/30 transition-all duration-500 ease-out"
             >
               <meta itemProp="name" content={b.name} />
               <meta itemProp="description" content={b.desc} />
-              <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-primary/0 group-hover:bg-primary/10 blur-3xl transition-all duration-700" />
-              <div className="relative">
-                <div className="flex items-baseline justify-between mb-6">
-                  <span className="text-display text-6xl text-primary/20 group-hover:text-primary/40 transition-colors">
+              <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-primary/0 group-hover:bg-primary/10 blur-[50px] transition-all duration-700 ease-out" />
+              <div className="relative z-10">
+                <div className="flex items-baseline justify-between mb-8">
+                  <span className="text-display text-6xl text-primary/10 group-hover:text-primary/30 transition-colors duration-500">
                     0{i + 1}
                   </span>
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground">
+                  <span className="text-xs uppercase tracking-widest font-semibold text-muted-foreground">
                     {b.pack ?? "12.5 KG"}
                   </span>
                 </div>
-                <h3 className="text-display text-2xl lg:text-3xl text-foreground">{b.name}</h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">{b.desc}</p>
+                <h3 className="text-display text-3xl text-foreground group-hover:text-primary transition-colors duration-300">{b.name}</h3>
+                <p className="mt-5 text-muted-foreground leading-relaxed text-base">{b.desc}</p>
 
                 {b.ingredients && (
                   <PackDetails
-                    className="mt-6 pt-6 border-t border-border"
+                    className="mt-8 pt-8 border-t border-white/10"
                     ingredients={b.ingredients}
                     bolded={b.bolded}
                     allergens={b.allergens}
@@ -132,9 +138,9 @@ const Breading = () => {
                   />
                 )}
 
-                <div className="mt-6 pt-6 border-t border-border flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground">Best for</span>
-                  <span className="text-sm text-foreground font-medium">{b.use}</span>
+                <div className="mt-8 pt-8 border-t border-white/10 flex items-center justify-between">
+                  <span className="text-[11px] uppercase tracking-widest text-muted-foreground font-semibold">Best for</span>
+                  <span className="text-sm text-foreground font-medium tracking-wide">{b.use}</span>
                 </div>
               </div>
             </article>

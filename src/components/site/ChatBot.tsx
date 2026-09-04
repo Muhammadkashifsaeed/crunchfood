@@ -140,10 +140,10 @@ const ChatBot = () => {
 
       {/* Panel */}
       {open && (
-        <div className="fixed inset-x-3 bottom-24 z-50 sm:inset-x-auto sm:left-5 sm:bottom-24 sm:w-[400px] max-h-[75vh] flex flex-col bg-card border border-border shadow-deep overflow-hidden">
+        <div className="fixed inset-x-3 bottom-24 z-50 sm:inset-x-auto sm:left-5 sm:bottom-24 sm:w-[400px] max-h-[75vh] flex flex-col glass-card shadow-deep overflow-hidden">
           {/* Header */}
-          <div className="flex items-center gap-3 p-4 border-b border-border bg-gradient-to-r from-primary/10 to-transparent">
-            <span className="h-9 w-9 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+          <div className="flex items-center gap-3 p-4 border-b border-white/10 bg-gradient-to-r from-primary/10 to-transparent">
+            <span className="h-9 w-9 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 group-hover:bg-gradient-ember group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 ease-out">
               <Sparkles className="h-4 w-4" />
             </span>
             <div className="min-w-0">
@@ -160,7 +160,7 @@ const ChatBot = () => {
                 className={`max-w-[85%] px-3 py-2 text-sm leading-relaxed ${
                   m.role === "user"
                     ? "ml-auto bg-primary text-primary-foreground rounded-2xl rounded-br-sm"
-                    : "mr-auto bg-background border border-border text-foreground rounded-2xl rounded-bl-sm"
+                    : "mr-auto bg-background border border-white/10 text-foreground rounded-2xl rounded-bl-sm"
                 }`}
               >
                 {m.role === "assistant" ? (
@@ -173,7 +173,7 @@ const ChatBot = () => {
               </div>
             ))}
             {loading && messages[messages.length - 1]?.role === "user" && (
-              <div className="mr-auto bg-background border border-border text-muted-foreground rounded-2xl rounded-bl-sm px-3 py-2 text-sm">
+              <div className="mr-auto bg-background border border-white/10 text-muted-foreground rounded-2xl rounded-bl-sm px-3 py-2 text-sm">
                 <span className="inline-flex gap-1">
                   <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground animate-bounce" />
                   <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground animate-bounce [animation-delay:0.15s]" />
@@ -190,7 +190,7 @@ const ChatBot = () => {
                 <button
                   key={s}
                   onClick={() => send(s)}
-                  className="text-xs px-2.5 py-1.5 border border-border bg-background hover:border-primary/60 text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-xs px-2.5 py-1.5 border border-white/10 bg-background hover:border-primary/60 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {s}
                 </button>
@@ -204,13 +204,13 @@ const ChatBot = () => {
               e.preventDefault();
               send(input);
             }}
-            className="p-3 border-t border-border flex items-center gap-2 bg-background"
+            className="p-3 border-t border-white/10 flex items-center gap-2 bg-background"
           >
             <Input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about ingredients, MOQs, samples…"
-              className="flex-1 h-10 bg-card border-border"
+              className="flex-1 h-10 bg-card border-white/10"
               disabled={loading}
               maxLength={500}
             />

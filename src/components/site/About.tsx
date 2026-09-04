@@ -35,7 +35,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-16">
           <div className="lg:col-span-7">
             <span className="text-eyebrow">About Crunch Foods</span>
-            <h2 className="text-display mt-4 text-4xl lg:text-6xl">
+            <h2 className="text-display mt-4 text-4xl lg:text-6xl drop-shadow-sm">
               A wholesale partner built on <span className="gradient-text-ember">predictable supply.</span>
             </h2>
           </div>
@@ -52,9 +52,9 @@ const About = () => {
           {pillars.map(({ icon: Icon, title, body }) => (
             <div
               key={title}
-              className="group bg-card border border-border p-7 lg:p-9 hover:border-primary/50 transition-all"
+              className="group glass-card p-7 lg:p-9 transition-all"
             >
-              <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-gradient-ember group-hover:text-primary-foreground transition-all">
+              <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-gradient-ember group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 ease-out">
                 <Icon className="h-5 w-5" />
               </div>
               <h3 className="text-display text-2xl text-foreground">{title}</h3>
@@ -65,7 +65,7 @@ const About = () => {
           ))}
         </div>
 
-        <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+        <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-white/10">
           {[
             { k: "5–10 days", v: "Stock SKU lead time" },
             { k: "18 months", v: "Actual shelf life" },

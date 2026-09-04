@@ -29,14 +29,14 @@ const QuickInquiry = () => {
       <a
         href={`tel:${PHONE}`}
         aria-label="Call sales"
-        className="h-14 w-14 rounded-full bg-card border border-border text-foreground shadow-deep flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+        className="h-14 w-14 rounded-full glass-card text-foreground shadow-deep flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
       >
         <Phone className="h-5 w-5" />
       </a>
       <a
         href={`mailto:${EMAIL}?subject=Wholesale%20Inquiry&body=${message}`}
         aria-label="Email sales"
-        className="h-14 w-14 rounded-full bg-card border border-border text-foreground shadow-deep flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+        className="h-14 w-14 rounded-full glass-card text-foreground shadow-deep flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
       >
         <Mail className="h-5 w-5" />
       </a>

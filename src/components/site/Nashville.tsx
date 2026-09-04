@@ -1,5 +1,7 @@
 import nashvilleImg from "@/assets/nashville-hot.jpg";
 import PackDetails, { PackSpec } from "./PackDetails";
+import { motion } from "framer-motion";
+
 
 type Dusting = {
   name: string;
@@ -26,6 +28,19 @@ const dustings: Dusting[] = [
 ];
 
 const Nashville = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
+  };
+
   return (
     <section id="nashville" className="relative py-24 lg:py-32 bg-background overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial-glow" />
@@ -44,7 +59,7 @@ const Nashville = () => {
 
           <div className="lg:order-1">
             <span className="text-eyebrow text-secondary">03 · Nashville Dusting Series — Wholesale</span>
-            <h2 className="text-display mt-4 text-5xl lg:text-7xl">
+            <h2 className="text-display mt-4 text-5xl lg:text-7xl drop-shadow-sm">
               Bulk Nashville hot <br />
               <span className="gradient-text-ember">dusting blends.</span>
             </h2>
@@ -62,18 +77,25 @@ const Nashville = () => {
               <span className="text-sm text-foreground"><span className="text-display gradient-text-ember">1:0</span> dust straight on hot chicken</span>
             </div>
 
-            <div className="mt-10 grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-50px" }}
+              className="mt-10 grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4"
+            >
               {dustings.map((n) => (
-                <div
+                <motion.div
+                  variants={itemVariants}
                   key={n.name}
                   itemScope
                   itemType="https://schema.org/Product"
-                  className="bg-card border border-secondary/40 p-5 hover:bg-secondary/10 transition-colors"
+                  className="group bg-card border border-secondary/40 p-5 hover:-translate-y-1 hover:shadow-xl hover:shadow-secondary/20 hover:border-secondary/80 hover:bg-white/5 transition-all duration-300 cursor-default"
                 >
                   <meta itemProp="name" content={n.name} />
                   <meta itemProp="description" content={n.desc} />
-                  <div className="text-xl">{n.level}</div>
-                  <div className="text-display text-base lg:text-lg mt-3 text-foreground leading-tight">{n.name}</div>
+                  <div className="text-xl group-hover:scale-110 transition-transform origin-left">{n.level}</div>
+                  <div className="text-display text-base lg:text-lg mt-3 text-foreground leading-tight group-hover:text-secondary transition-colors duration-300">{n.name}</div>
                   <div className="text-xs lg:text-sm text-muted-foreground mt-2">{n.desc}</div>
                   {n.ingredients && (
                     <PackDetails
@@ -84,9 +106,9 @@ const Nashville = () => {
                       method={n.method}
                     />
                   )}
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

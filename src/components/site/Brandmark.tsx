@@ -20,19 +20,12 @@ const Brandmark = ({
   size = "text-lg",
 }: BrandmarkProps) => {
   return (
-    <span className={cn("inline-flex items-center gap-2", className)}>
-      {withLogo && (
-        <img
-          src={logo.src}
-          alt="Crunch Foods logo"
-          width={36}
-          height={36}
-          className="h-9 w-9 object-contain shrink-0"
-        />
-      )}
-      <span className={cn("text-display text-foreground tracking-tight", size)}>
-        Crunch <span className="text-primary">Foods</span>
-      </span>
+    <span className={cn("inline-flex items-center mr-20 lg:mr-28", className)}>
+      <img
+        src="/images/CRUNCH FOOD LOGO 3-03.png"
+        alt="Crunch Foods logo"
+        className="h-10 w-auto object-contain shrink-0 scale-[2.5] origin-left transform-gpu"
+      />
     </span>
   );
 };

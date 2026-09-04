@@ -1,4 +1,5 @@
 import { Truck, ShieldCheck, Package, Leaf } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const blocks = [
   {
@@ -34,7 +35,7 @@ const Logistics = () => {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <span className="text-eyebrow">07 · Logistics & Specs</span>
-            <h2 className="text-display mt-4 text-4xl lg:text-6xl">
+            <h2 className="text-display mt-4 text-4xl lg:text-6xl drop-shadow-sm">
               Built for the <span className="gradient-text-ember">supply chain.</span>
             </h2>
           </div>
@@ -51,9 +52,9 @@ const Logistics = () => {
             return (
               <div
                 key={b.label}
-                className="group relative bg-card border border-border p-7 hover:border-primary/40 transition-all"
+                className="group relative glass-card p-7 lg:p-8 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(251,146,60,0.15)] hover:border-primary/30 transition-all duration-500 ease-out"
               >
-                <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-gradient-ember group-hover:text-primary-foreground transition-all">
+                <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-gradient-ember group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 ease-out">
                   <Icon className="h-5 w-5" />
                 </div>
                 <div className="text-eyebrow">{b.label}</div>
@@ -68,7 +69,7 @@ const Logistics = () => {
           })}
         </div>
 
-        <div className="mt-12 p-8 lg:p-10 bg-card border border-border flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div className="mt-12 p-8 lg:p-10 glass-card flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div>
             <div className="text-eyebrow">Nutritional Specifications</div>
             <h3 className="text-display text-2xl lg:text-3xl text-foreground mt-2">
@@ -80,12 +81,11 @@ const Logistics = () => {
               24 hours of inquiry.
             </p>
           </div>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background hover:gap-3 transition-all whitespace-nowrap"
-          >
-            Request spec sheets <span aria-hidden>→</span>
-          </a>
+          <Button variant="ember" size="lg" asChild className="whitespace-nowrap">
+            <a href="/contact">
+              Request spec sheets <span aria-hidden>→</span>
+            </a>
+          </Button>
         </div>
       </div>
     </section>

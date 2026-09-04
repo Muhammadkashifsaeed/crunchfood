@@ -51,7 +51,7 @@ const WhoWeSupply = () => {
       <div className="container-x">
         <div className="max-w-3xl">
           <span className="text-eyebrow">Who We Supply</span>
-          <h2 className="text-display mt-4 text-4xl lg:text-6xl">
+          <h2 className="text-display mt-4 text-4xl lg:text-6xl drop-shadow-sm">
             Built for the operators <br />
             <span className="gradient-text-ember">who never stop frying.</span>
           </h2>
@@ -68,9 +68,9 @@ const WhoWeSupply = () => {
             return (
               <article
                 key={s.title}
-                className="group relative bg-card border border-border p-7 lg:p-8 flex flex-col hover:border-primary/50 transition-all duration-300"
+                className="group relative glass-card p-7 lg:p-8 flex flex-col hover:border-primary/50 transition-all duration-300"
               >
-                <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-gradient-ember group-hover:text-primary-foreground transition-all">
+                <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-gradient-ember group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 ease-out">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-display text-2xl text-foreground">{s.title}</h3>

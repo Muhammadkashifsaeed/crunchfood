@@ -1,6 +1,7 @@
 import packagingImg from "@/assets/packaging.jpg";
 import { Button } from "@/components/ui/button";
 import { BadgeCheck } from "lucide-react";
+import { motion } from "framer-motion";
 
 const specs = [
   { k: "12.5 KG", v: "Breading bags", d: "Moisture-locked, food-grade kraft. Stackable for cold storage. Front-printed Crunch Foods master brand." },
@@ -16,6 +17,19 @@ const brandingPoints = [
 ];
 
 const Packaging = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: 20 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } }
+  };
+
   return (
     <section id="packaging" className="relative py-24 lg:py-32 bg-background overflow-hidden">
       <div className="container-x">
@@ -34,7 +48,7 @@ const Packaging = () => {
 
           <div>
             <span className="text-eyebrow">06 · Packaging & Branding</span>
-            <h2 className="text-display mt-4 text-4xl lg:text-5xl">
+            <h2 className="text-display mt-4 text-4xl lg:text-5xl drop-shadow-sm">
               Every pack carries the <span className="gradient-text-ember">Crunch Foods</span> mark.
             </h2>
             <p className="mt-6 text-muted-foreground text-lg">
@@ -53,17 +67,27 @@ const Packaging = () => {
               ))}
             </div>
 
-            <div className="mt-8 space-y-4">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-50px" }}
+              className="mt-8 space-y-4"
+            >
               {specs.map((s) => (
-                <div key={s.k} className="flex gap-5 p-5 bg-card border border-border">
-                  <div className="text-display text-2xl gradient-text-ember w-24 shrink-0">{s.k}</div>
+                <motion.div 
+                  variants={itemVariants}
+                  key={s.k} 
+                  className="group flex gap-5 p-5 glass-card hover:-translate-y-1 hover:border-primary/40 hover:bg-white/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 cursor-default"
+                >
+                  <div className="text-display text-2xl gradient-text-ember w-24 shrink-0 group-hover:scale-110 transition-transform origin-left">{s.k}</div>
                   <div>
-                    <div className="text-foreground font-medium">{s.v}</div>
+                    <div className="text-foreground font-medium group-hover:text-primary transition-colors duration-300">{s.v}</div>
                     <div className="text-sm text-muted-foreground mt-1">{s.d}</div>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
             <Button variant="ember" size="lg" className="mt-8" asChild>
               <a href="/contact">Request Spec Sheet →</a>

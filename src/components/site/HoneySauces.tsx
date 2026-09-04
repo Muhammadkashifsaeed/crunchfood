@@ -75,7 +75,7 @@ const HoneySauces = () => {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <span className="text-eyebrow">05 · Honey Spice Series — Wholesale</span>
-            <h2 className="text-display mt-4 text-4xl lg:text-6xl">
+            <h2 className="text-display mt-4 text-4xl lg:text-6xl drop-shadow-sm">
               Bulk hot-honey, <br />
               <span className="gradient-text-ember">three dry spice blends.</span>
             </h2>
@@ -138,19 +138,19 @@ const HoneySauces = () => {
                   {h.note}
                 </p>
                 <dl className="mt-8 grid grid-cols-3 gap-4 text-sm">
-                  <div className="border-l border-border pl-4">
+                  <div className="border-l border-white/10 pl-4">
                     <dt className="text-xs uppercase tracking-widest text-muted-foreground">
                       Heat
                     </dt>
                     <dd className="text-foreground font-medium mt-1">{h.heat}</dd>
                   </div>
-                  <div className="border-l border-border pl-4">
+                  <div className="border-l border-white/10 pl-4">
                     <dt className="text-xs uppercase tracking-widest text-muted-foreground">
                       Scoville
                     </dt>
                     <dd className="text-foreground font-medium mt-1">{h.scoville}</dd>
                   </div>
-                  <div className="border-l border-border pl-4">
+                  <div className="border-l border-white/10 pl-4">
                     <dt className="text-xs uppercase tracking-widest text-muted-foreground">
                       Pack
                     </dt>
@@ -165,7 +165,7 @@ const HoneySauces = () => {
                 </a>
                 {h.ingredients && (
                   <PackDetails
-                    className="mt-8 pt-6 border-t border-border"
+                    className="mt-8 pt-6 border-t border-white/10"
                     ingredients={h.ingredients}
                     bolded={h.bolded}
                     allergens={h.allergens}

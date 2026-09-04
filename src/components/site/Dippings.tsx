@@ -1,5 +1,6 @@
 import dippingsImg from "@/assets/dippings.jpg";
 import PackDetails, { PackSpec } from "./PackDetails";
+import { motion } from "framer-motion";
 
 type Sauce = {
   name: string;
@@ -38,13 +39,26 @@ const sauces: Sauce[] = [
 ];
 
 const Dippings = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.95, y: 10 },
+    show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
+  };
+
   return (
     <section id="dippings" className="relative py-24 lg:py-32 bg-muted/30">
       <div className="container-x">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <span className="text-eyebrow">04 · Signature Dipping Spice Blends — Wholesale</span>
-            <h2 className="text-display mt-4 text-4xl lg:text-6xl">
+            <h2 className="text-display mt-4 text-4xl lg:text-6xl drop-shadow-sm">
               Six wholesale dry blends. <br />Six menu upsells.
             </h2>
           </div>
@@ -63,53 +77,61 @@ const Dippings = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:row-span-2 relative overflow-hidden">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+        >
+          <motion.div variants={itemVariants} className="lg:row-span-2 relative overflow-hidden group">
             <img
               src={dippingsImg.src}
               alt="Six premium dry spice blends arranged on a slate board"
               loading="lazy"
               width={1280}
               height={1280}
-              className="w-full h-full object-cover min-h-[400px] shadow-deep"
+              className="w-full h-full object-cover min-h-[400px] shadow-deep group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent group-hover:from-background/90 transition-colors duration-500" />
             <div className="absolute bottom-6 left-6 right-6">
               <div className="text-eyebrow">2kg pouches</div>
               <div className="text-display text-foreground text-2xl mt-2">Ready for your line.</div>
             </div>
-          </div>
+          </motion.div>
 
           {sauces.map((s, i) => (
-            <article
+            <motion.article
+              variants={itemVariants}
               key={s.name}
               itemScope
               itemType="https://schema.org/Product"
-              className="group bg-card border border-border p-6 hover:border-primary/40 transition-all"
+              className="group glass-card p-6 hover:-translate-y-1 hover:border-primary/40 hover:bg-white/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 cursor-default"
             >
               <meta itemProp="name" content={s.name} />
               <meta itemProp="description" content={s.note} />
-              <div className={`h-12 w-12 rounded-full bg-gradient-to-br ${s.color} shadow-lg mb-5 group-hover:scale-110 transition-transform`} />
+              <div className={`h-12 w-12 rounded-full bg-gradient-to-br ${s.color} shadow-lg mb-5 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] transition-all duration-500 ease-out`} />
               <div className="flex items-baseline justify-between">
-                <h3 className="text-display text-xl text-foreground">{s.name}</h3>
-                <span className="text-xs text-muted-foreground">0{i + 1}</span>
+                <h3 className="text-display text-xl text-foreground group-hover:text-primary transition-colors duration-300">{s.name}</h3>
+                <span className="text-xs text-muted-foreground group-hover:text-primary/70 transition-colors duration-300">0{i + 1}</span>
               </div>
               <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{s.note}</p>
               {s.ingredients && (
                 <PackDetails
-                  className="mt-5 pt-5 border-t border-border"
+                  className="mt-5 pt-5 border-t border-white/10"
                   ingredients={s.ingredients}
                   bolded={s.bolded}
                   allergens={s.allergens}
                   method={s.method}
                 />
               )}
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default Dippings;
+

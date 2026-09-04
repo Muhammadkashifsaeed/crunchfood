@@ -100,7 +100,7 @@ const ChipSpice = () => {
 
           <div>
             <span className="text-eyebrow">06 · Chip Spice Series — Wholesale</span>
-            <h2 className="text-display mt-4 text-4xl lg:text-6xl">
+            <h2 className="text-display mt-4 text-4xl lg:text-6xl drop-shadow-sm">
               Bulk chip-shop dusts. <br />
               <span className="gradient-text-ember">Five flavour-bombs.</span>
             </h2>
@@ -130,7 +130,7 @@ const ChipSpice = () => {
               key={c.name}
               itemScope
               itemType="https://schema.org/Product"
-              className="group relative bg-card border border-border p-6 lg:p-8 hover:border-primary/50 transition-all overflow-hidden"
+              className="group relative glass-card p-6 lg:p-8 transition-all overflow-hidden"
             >
               <meta itemProp="name" content={c.name} />
               <meta itemProp="description" content={c.tagline} />
@@ -153,7 +153,7 @@ const ChipSpice = () => {
                   {c.tagline}
                 </p>
                 <PackDetails
-                  className="mt-5 pt-5 border-t border-border"
+                  className="mt-5 pt-5 border-t border-white/10"
                   ingredients={c.ingredients}
                   bolded={c.bolded}
                   allergens={c.allergens}

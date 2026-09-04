@@ -41,7 +41,7 @@ const ConceptDryToLiquid = () => {
             <span className="h-px w-8 bg-primary" />
             One Dry Spice · Four Liquid Formats
           </span>
-          <h2 className="text-display mt-6 text-4xl lg:text-6xl">
+          <h2 className="text-display mt-6 text-4xl lg:text-6xl drop-shadow-sm">
             One bag. <span className="gradient-text-ember">Four sauces.</span> <br />
             Zero bottled liquids.
           </h2>
@@ -59,9 +59,9 @@ const ConceptDryToLiquid = () => {
           {conversions.map(({ icon: Icon, title, ratio, blend, use }) => (
             <div
               key={title}
-              className="group bg-card border border-border p-6 hover:border-primary/60 transition-colors flex flex-col"
+              className="group glass-card p-6 lg:p-8 flex flex-col hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(251,146,60,0.15)] hover:border-primary/30 transition-all duration-500 ease-out"
             >
-              <span className="h-12 w-12 rounded-full bg-primary/15 text-primary flex items-center justify-center">
+              <span className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 group-hover:bg-gradient-ember group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 ease-out">
                 <Icon className="h-6 w-6" />
               </span>
               <div className="mt-5 flex items-baseline justify-between">
@@ -69,7 +69,7 @@ const ConceptDryToLiquid = () => {
                 <span className="text-display text-2xl gradient-text-ember">{ratio}</span>
               </div>
               <p className="mt-3 text-sm text-foreground">{blend}</p>
-              <p className="mt-3 text-sm text-muted-foreground border-t border-border/60 pt-3">
+              <p className="mt-3 text-sm text-muted-foreground border-t border-white/10 pt-3">
                 {use}
               </p>
             </div>

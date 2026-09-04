@@ -19,7 +19,7 @@ const Certifications = () => {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <span className="text-eyebrow">08 · Certifications</span>
-            <h2 className="text-display mt-4 text-4xl lg:text-6xl">
+            <h2 className="text-display mt-4 text-4xl lg:text-6xl drop-shadow-sm">
               Audited, certified, <br />
               <span className="gradient-text-ember">trusted at scale.</span>
             </h2>
@@ -37,9 +37,9 @@ const Certifications = () => {
             return (
               <div
                 key={c.name}
-                className="group relative bg-card border border-border p-6 lg:p-7 hover:border-primary/50 transition-all"
+                className="group relative glass-card p-7 lg:p-8 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(251,146,60,0.15)] hover:border-primary/30 transition-all duration-500 ease-out"
               >
-                <div className="h-11 w-11 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-gradient-ember group-hover:text-primary-foreground transition-all">
+                <div className="h-11 w-11 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-gradient-ember group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 ease-out">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-display text-lg lg:text-xl text-foreground">

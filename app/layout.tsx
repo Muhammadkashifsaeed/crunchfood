@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Providers } from "./providers";
 import "./globals.css";
 
@@ -40,7 +40,18 @@ export const metadata: Metadata = {
     description:
       "Bulk breading, peri peri marinades, Nashville hot dustings & honey spice blends. Wholesale to foodservice & private label across USA & Canada.",
   },
-  icons: { icon: "/favicon.png" },
+  icons: {
+    icon: "/favicon.png?v=6",
+    shortcut: "/favicon.png?v=6",
+    apple: "/favicon.png?v=6",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#fb923c",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 const organizationJsonLd = {
@@ -81,7 +92,7 @@ const wholesaleStoreJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

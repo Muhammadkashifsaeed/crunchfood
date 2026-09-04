@@ -33,7 +33,7 @@ const Markets = () => {
 
           <div className="lg:col-span-7">
             <span className="text-eyebrow">05 · Built For Operators</span>
-            <h2 className="text-display mt-4 text-4xl lg:text-5xl">
+            <h2 className="text-display mt-4 text-4xl lg:text-5xl drop-shadow-sm">
               Wholesale partners across <span className="gradient-text-ember">USA & Canada.</span>
             </h2>
             <p className="mt-6 text-muted-foreground text-lg">

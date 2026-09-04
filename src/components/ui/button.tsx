@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground shadow-ember-sm hover:shadow-ember hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-300",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        outline: "border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/20 transition-all duration-300",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        ghost: "hover:bg-white/10 hover:text-foreground transition-all duration-300",
         link: "text-primary underline-offset-4 hover:underline",
-        ember: "bg-gradient-ember text-primary-foreground font-semibold shadow-ember hover:shadow-[0_25px_70px_-15px_hsl(var(--primary)/0.7)] hover:-translate-y-0.5 transition-all duration-300",
-        outlineLight: "border border-foreground/30 text-foreground hover:bg-foreground hover:text-background transition-colors duration-300",
+        ember: "bg-gradient-ember text-primary-foreground font-semibold shadow-ember-sm hover:shadow-ember hover:-translate-y-1 hover:scale-[1.02] transition-all duration-500 ease-out",
+        outlineLight: "border border-white/20 bg-white/5 backdrop-blur-md text-foreground hover:bg-white/15 hover:border-white/40 hover:-translate-y-1 transition-all duration-500 ease-out",
       },
       size: {
         default: "h-10 px-4 py-2",
