@@ -1,7 +1,7 @@
 import packagingImg from "@/assets/packaging.jpg";
 import { Button } from "@/components/ui/button";
 import { BadgeCheck } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const specs = [
   { k: "12.5 KG", v: "Breading bags", d: "Moisture-locked, food-grade kraft. Stackable for cold storage. Front-printed Crunch Foods master brand." },
@@ -17,7 +17,7 @@ const brandingPoints = [
 ];
 
 const Packaging = () => {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -25,7 +25,7 @@ const Packaging = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, x: 20 },
     show: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } }
   };

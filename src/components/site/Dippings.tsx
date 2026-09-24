@@ -1,6 +1,6 @@
 import dippingsImg from "@/assets/dippings.jpg";
 import PackDetails, { PackSpec } from "./PackDetails";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 type Sauce = {
   name: string;
@@ -39,7 +39,7 @@ const sauces: Sauce[] = [
 ];
 
 const Dippings = () => {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -47,7 +47,7 @@ const Dippings = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, scale: 0.95, y: 10 },
     show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
   };
