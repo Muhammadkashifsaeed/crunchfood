@@ -1,6 +1,6 @@
 # Crunch Foods Agent Guide
 
-Crunch Foods is a Next.js 15 App Router wholesale marketing site with React 18, Tailwind CSS, shadcn/Radix UI, Prisma, PostgreSQL, and Vitest. See [README.md](README.md) for setup details and the full command list.
+Crunch Foods is a Next.js 15 App Router wholesale marketing site with React 18, Tailwind CSS, shadcn/Radix UI, and Vitest. See [README.md](README.md) for setup details and the full command list.
 
 ## Working Agreements
 
@@ -14,14 +14,13 @@ Crunch Foods is a Next.js 15 App Router wholesale marketing site with React 18, 
 
 - App Router files are server components by default. Add `"use client"` only when a component needs browser state, event handlers, Framer Motion, or a client-only library.
 - Many existing views are client components and consequently pull their imported sections into the client bundle. Avoid widening this boundary for static content when adding new work.
-- Keep secrets and database access server-side. The chatbot uses `/api/chat`; lead persistence belongs in `/api/leads` and `src/lib/db.ts`.
+- Keep secrets server-side. The chatbot uses `/api/chat`.
 
 ## Data and API Conventions
 
-- Validate request bodies with Zod before using them. Match the `Lead` model in `prisma/schema.prisma` when changing lead fields.
-- `DATABASE_URL` is required for Prisma. `OPENAI_API_KEY` is required by the chat route and `OPENAI_MODEL` is optional.
-- The current contact and sample forms use external Grillados embeds; changes to `/api/leads` do not affect those submissions unless the forms are migrated.
-- Do not expose `OPENAI_API_KEY` or database credentials to client components.
+- `OPENAI_API_KEY` is required by the chat route and `OPENAI_MODEL` is optional.
+- The contact and sample forms use external Grillados embeds (iframes).
+- Do not expose `OPENAI_API_KEY` to client components.
 
 ## Validation
 
@@ -33,7 +32,6 @@ npm test
 npm run build
 ```
 
-For schema changes, generate Prisma client and create or apply a migration as appropriate. Do not assume a migration history exists; inspect `prisma/migrations/` first.
 
 ## Known Repository Details
 
