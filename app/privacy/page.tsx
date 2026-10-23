@@ -1,9 +1,14 @@
 import { Metadata } from "next";
 import PageLayout from "@/components/site/PageLayout";
 
+const title = "Privacy Policy";
+const description = "Privacy Policy for Crunch Foods.";
+
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Privacy Policy for Crunch Foods.",
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function PrivacyPolicy() {
