@@ -121,6 +121,7 @@ const Footer = () => {
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <Link href="/privacy" className="hover:text-foreground transition-colors duration-300">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-foreground transition-colors duration-300">Terms of Service</Link>
+            <span>Developed by <a href="https://digistartup.io" target="_blank" rel="noopener" className="hover:text-foreground transition-colors duration-300">digistartup.io</a></span>
           </div>
         </motion.div>
       </div>

@@ -77,7 +77,7 @@ const wholesaleStoreJsonLd = {
   name: "Crunch Foods",
   url: SITE_URL,
   telephone: "+19052089990",
-  email: "sales@breadingandspices.com",
+  email: "sales@crunchfoods.ca",
   areaServed: ["United States", "Canada"],
   openingHoursSpecification: [
     {
