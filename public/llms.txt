@@ -1,21 +1,54 @@
 # Crunch Foods
 
-> B2B wholesale supplier of fried chicken breading, peri peri marinations, Nashville hot dustings, honey spice blends, and dipping rubs for foodservice operators, ghost kitchens, QSR chains, distributors (Sysco, US Foods, GFS) and private-label brands across the USA and Canada.
+> B2B wholesale supplier of fried chicken breading, peri peri marinations, Nashville hot dustings, honey spice blends, chip spice, and dipping rubs for foodservice operators, ghost kitchens, QSR chains, distributors (Sysco, US Foods, GFS) and private-label brands across the USA and Canada.
 
 Bulk MOQs, contract blending, pallet-ready shipping, and free samples for qualified operators.
 
 ## Pages
 
-- [Home](/): Product overview, capabilities, and wholesale inquiry.
+- [Home](https://crunchfood.ca/): Product overview, capabilities, and wholesale inquiry.
+- [About](https://crunchfood.ca/about): Company background, supply philosophy, and partnerships.
+- [Breading](https://crunchfood.ca/breading): Philadelphia premium breading, crispy wing breading, hot double breading, crispy spicy marinade. 12.5 kg foodservice bags.
+- [Peri Peri](https://crunchfood.ca/peri-peri): Lemon & Herb, Medium, and Hot peri peri marination powders. 2 kg pouches.
+- [Nashville Hot](https://crunchfood.ca/nashville): Nashville hot dusting and hot-hot dusting for fried chicken.
+- [Honey Spice](https://crunchfood.ca/honey-spice): Scotch bonnet, cayenne, and habanero honey spice blends. Dry powder → syrup (1:4 with warm honey).
+- [Dippings](https://crunchfood.ca/dippings): Chilli mint spice and Algerian spice dipping blends.
+- [Chip Spice](https://crunchfood.ca/chip-spice): Finishing seasoning for fries, wedges, and roasted potatoes.
+- [Packaging](https://crunchfood.ca/packaging): Bulk and retail-ready packaging, private label options.
+- [Wholesale](https://crunchfood.ca/wholesale): Pricing, MOQs, lead times, distributor onboarding.
+- [Contact](https://crunchfood.ca/contact): Quote requests and sales channels.
+- [Privacy Policy](https://crunchfood.ca/privacy)
+- [Terms of Service](https://crunchfood.ca/terms)
 
-## Product range (sections on the home page)
+## Products
 
-- [Breading](/#breading): Philadelphia premium breading in 12.5 kg bags.
-- [Dry → Liquid concept](/#concept): How our dry blends convert to liquid marinations and sauces.
-- [Peri Peri Marinations](/#marination): Lemon & Herb, Medium, and Hot.
-- [Nashville Hot](/#nashville): Nashville hot dusting spice and oils.
-- [Dippings](/#dippings): Signature dipping spice blends.
-- [Honey Spice Blends](/#honey-sauces): Honey cayenne, habanero, scotch bonnet drizzles.
-- [Packaging](/#packaging): Bulk and retail-ready packaging options.
-- [Wholesale](/#leadgen): Pricing, MOQs, lead times.
-- [Contact](/#contact): Quote requests and sales channels.
+- **Breading** (12.5 kg bags, 80 bags / 1,000 kg per pallet): Philadelphia Original, Crispy Wing, Hot Double, Crispy Spicy Marinade. Allergens: Wheat (Gluten), Celery, Mustard.
+- **Peri Peri Marinations** (2 kg pouches, 200 kg per pallet): Lemon & Herb (mild), Medium, Hot. Dry → liquid; mix with water/oil.
+- **Nashville Hot**: Nashville Hot Dusting, Hot-Hot Dusting. Sprinkle on fried chicken from the fryer.
+- **Honey Spice Blends** (powder → syrup): Scotch Bonnet, Cayenne, Habanero. ~1 part blend : 4 parts warm honey.
+- **Dippings**: Chilli Mint Spice, Algerian Spice.
+- **Chip Spice**: Finishing seasoning for fries, wedges, potatoes.
+
+## Supply terms
+
+- MOQ: 1 pallet per stocked SKU; 500 kg for custom/private-label blends.
+- Lead time: ~3 months from confirmed order; faster for stocked finished goods.
+- Shelf life: 18 months from production; minimum 12 months remaining on arrival.
+- Packaging: 12.5 kg foodservice bags, 2 kg pouches, retail-ready private label on request.
+- Shipping: FOB origin or DDP to distributor DC; freight quoted per lane.
+- Compliance: HACCP, FSSC 22000 / GFSI, FDA-registered, FSMA / FSVP, SFCR / CFIA, bilingual EN/FR labels available, Kosher / Halal letters on request.
+
+## Contact
+
+### Wholesale
+- Phone: +1 (905) 208-9990
+- Email: sales@breadingandspices.com
+- Hours: Monday–Friday, 9:00 AM – 6:00 PM EST
+
+### Retail Location
+- 5165 Chemin Dixie, Unit 2B, Mississauga, ON L4W 4G1
+- Phone: (905) 625-5558
+- Monday–Thursday: 11:30 AM – 10:00 PM
+- Friday: 11:00 AM – 2:00 AM
+- Saturday: 1:00 PM – 2:00 AM
+- Sunday: 1:00 PM – 10:00 PM
