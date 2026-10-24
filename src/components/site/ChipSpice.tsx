@@ -128,12 +128,8 @@ const ChipSpice = () => {
           {chipSpices.map((c, i) => (
             <article
               key={c.name}
-              itemScope
-              itemType="https://schema.org/Product"
               className="group relative glass-card p-6 lg:p-8 transition-all overflow-hidden"
             >
-              <meta itemProp="name" content={c.name} />
-              <meta itemProp="description" content={c.tagline} />
               <div
                 className={`absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gradient-to-br ${c.accent} opacity-20 group-hover:opacity-40 blur-3xl transition-opacity duration-700`}
               />

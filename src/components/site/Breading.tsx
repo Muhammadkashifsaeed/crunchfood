@@ -109,12 +109,8 @@ const Breading = () => {
           {breadings.map((b, i) => (
             <article
               key={b.name}
-              itemScope
-              itemType="https://schema.org/Product"
               className="group relative glass-card p-10 overflow-hidden hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(251,146,60,0.15)] hover:border-primary/30 transition-all duration-500 ease-out"
             >
-              <meta itemProp="name" content={b.name} />
-              <meta itemProp="description" content={b.desc} />
               <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-primary/0 group-hover:bg-primary/10 blur-[50px] transition-all duration-700 ease-out" />
               <div className="relative z-10">
                 <div className="flex items-baseline justify-between mb-8">

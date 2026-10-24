@@ -136,12 +136,8 @@ const Marination = () => {
                 <motion.article
                   variants={itemVariants}
                   key={m.name}
-                  itemScope
-                  itemType="https://schema.org/Product"
                   className="group p-5 glass-card hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/40 hover:bg-white/5 transition-all duration-300 cursor-default"
                 >
-                  <meta itemProp="name" content={m.name} />
-                  <meta itemProp="description" content={m.note} />
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex-1">
                       <div className="text-foreground font-medium group-hover:text-primary transition-colors duration-300">{m.name}</div>

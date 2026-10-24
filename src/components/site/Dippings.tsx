@@ -104,12 +104,8 @@ const Dippings = () => {
             <motion.article
               variants={itemVariants}
               key={s.name}
-              itemScope
-              itemType="https://schema.org/Product"
               className="group glass-card p-6 hover:-translate-y-1 hover:border-primary/40 hover:bg-white/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 cursor-default"
             >
-              <meta itemProp="name" content={s.name} />
-              <meta itemProp="description" content={s.note} />
               <div className={`h-12 w-12 rounded-full bg-gradient-to-br ${s.color} shadow-lg mb-5 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] transition-all duration-500 ease-out`} />
               <div className="flex items-baseline justify-between">
                 <h3 className="text-display text-xl text-foreground group-hover:text-primary transition-colors duration-300">{s.name}</h3>

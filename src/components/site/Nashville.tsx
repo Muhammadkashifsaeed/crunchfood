@@ -88,12 +88,8 @@ const Nashville = () => {
                 <motion.div
                   variants={itemVariants}
                   key={n.name}
-                  itemScope
-                  itemType="https://schema.org/Product"
                   className="group bg-card border border-secondary/40 p-5 hover:-translate-y-1 hover:shadow-xl hover:shadow-secondary/20 hover:border-secondary/80 hover:bg-white/5 transition-all duration-300 cursor-default"
                 >
-                  <meta itemProp="name" content={n.name} />
-                  <meta itemProp="description" content={n.desc} />
                   <div className="text-xl group-hover:scale-110 transition-transform origin-left">{n.level}</div>
                   <div className="text-display text-base lg:text-lg mt-3 text-foreground leading-tight group-hover:text-secondary transition-colors duration-300">{n.name}</div>
                   <div className="text-xs lg:text-sm text-muted-foreground mt-2">{n.desc}</div>
